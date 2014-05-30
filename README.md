@@ -1,4 +1,4 @@
-# heroku-auth-finder [![Build Status](https://travis-ci.org/heroku/heroku-auth-finder.png?branch=master)](https://travis-ci.org/heroku/heroku-auth-finder)
+# heroku-auth-finder
 
 Derive a Heroku API key from process.env or ~/.netrc
 
