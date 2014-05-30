@@ -23,5 +23,3 @@ npm test
 ## License
 
 MIT
-
-zeke
