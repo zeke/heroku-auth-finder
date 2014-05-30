@@ -1,37 +1,27 @@
-# npm-skeleton
+# heroku-auth-finder [![Build Status](https://travis-ci.org/heroku/heroku-auth-finder.png?branch=master)](https://travis-ci.org/heroku/heroku-auth-finder)
 
-A boilerplate for creating healthy npm modules.
+Derive a Heroku API key from process.env or ~/.netrc
 
-### The Setup
+https://github.com/heroku/heroku-auth-finder
 
-- [strict mode](http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it) JavaScript
-- [mocha](visionmedia.github.io/mocha/) test harness with nice output
-- [dotenv](https://github.com/bkeepers/dotenv), which reads `.env` into `process.env`.
-- a `.gitignore` for `.env` and the `node_modules` directory
-- a hollowed-out `package.json`
+## Installation
 
-### Usage
+Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
-Put this in `.bashrc` or whatever:
-
-```
-skeleton() {
-  git clone https://github.com/zeke/npm-skeleton $1
-  cd $1
-  rm -rf ./.git
-  echo "FOO=BAR" >> .env
-  echo "node_modules" >> .gitignore
-  echo ".env" >> .gitignore
-  npm install
-  npm test
-  git init
-  git add .
-  git commit -am "---=[ npm skeleton ]=---"
-}
+```sh
+npm install heroku-auth-finder --save
 ```
 
-Then pass a name for your new project:
 
+## Tests
+
+```sh
+npm install
+npm test
 ```
-skeleton that-new-thang
-```
+
+## License
+
+MIT
+
+zeke

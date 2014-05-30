@@ -2,21 +2,19 @@
 
 require("dotenv").load()
 var assert = require("assert")
+var auth = require("..")
 
-describe("thing", function() {
+describe("auth()", function() {
 
-  beforeEach(function() {
-    // stuff
+  it("looks for HEROKU_API_KEY", function() {
+    process.env.HEROKU_API_KEY = "xyz"
+    assert.equal(auth(), "xyz")
   })
 
-  it("does stuff", function() {
-    assert(true)
+  it("reads from ~/.netrc", function() {
+    delete process.env.HEROKU_API_KEY
+    assert(typeof(auth()), "string")
+    assert(auth().length > 16)
   })
-
-  it("reads environment from .env file", function() {
-    assert.equal(process.env.FOO, "BAR")
-  })
-
-  it("has pending stuff")
 
 })
